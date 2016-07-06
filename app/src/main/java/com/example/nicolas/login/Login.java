@@ -89,7 +89,7 @@ public class Login extends Activity implements OnClickListener {
         protected void onPreExecute() {
             super.onPreExecute();
             pDialog = new ProgressDialog(Login.this);
-            pDialog.setMessage("Attempting login...");
+            pDialog.setMessage("Conectando...");
             pDialog.setIndeterminate(false);
             pDialog.setCancelable(true);
             pDialog.show();
@@ -125,7 +125,7 @@ public class Login extends Activity implements OnClickListener {
                     edit.putString("username", username);
                     edit.commit();
 
-                    Intent i = new Intent(Login.this, ReadComments.class);
+                    Intent i = new Intent(Login.this, pedidos.class);
                     finish();
                     startActivity(i);
                     return json.getString(TAG_MESSAGE);
